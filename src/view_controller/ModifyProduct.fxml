@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ModifyProductController">
+    <children>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="580.0" style="-fx-border-radius: 20; -fx-border-color: black;">
+            <children>
+                <TableView fx:id="tableViewOne" layoutX="290.0" layoutY="39.0" prefHeight="120.0" prefWidth="285.0">
+                    <columns>
+                        <TableColumn fx:id="TablePartID" prefWidth="50.0" text="Part ID" />
+                        <TableColumn fx:id="TablePartName" prefWidth="65.0" text="Part Name" />
+                        <TableColumn fx:id="TableInventory" prefWidth="95.0" text="Inventory Level" />
+                        <TableColumn fx:id="TablePrice" prefWidth="75.0" text="Price / Cost" />
+                    </columns>
+                </TableView>
+                <Button layoutX="133.0" layoutY="320.0" mnemonicParsing="false" onAction="#OnActionCancelChanges" text="Cancel" />
+                <Button layoutX="39.0" layoutY="320.0" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#OnActionSaveChanges" text="Save" />
+                <TextField fx:id="searchPartField" layoutX="378.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#OnActionSearchPart" prefHeight="25.0" prefWidth="193.0" promptText="Search by Part ID or Name" />
+                <VBox layoutX="33.0" layoutY="60.0" prefHeight="233.0" prefWidth="51.0">
+                    <children>
+                        <Label text="ID">
+                            <VBox.margin>
+                                <Insets bottom="21.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Name">
+                            <VBox.margin>
+                                <Insets bottom="21.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Inv">
+                            <VBox.margin>
+                                <Insets bottom="21.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Price">
+                            <VBox.margin>
+                                <Insets bottom="21.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Max">
+                            <VBox.margin>
+                                <Insets bottom="21.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Min">
+                            <VBox.margin>
+                                <Insets bottom="21.0" />
+                            </VBox.margin></Label>
+                    </children>
+                </VBox>
+                <VBox layoutX="90.0" layoutY="60.0" prefHeight="218.0" prefWidth="81.0">
+                    <children>
+                        <TextField fx:id="enterId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.2" prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="Auto Generated- Disabled" />
+                     </tooltip>
+                        </TextField>
+                        <TextField fx:id="enterName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.2" prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="enterInv" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.2" prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="enterPrice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.2" prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="enterMax" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.2" prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="enterMin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.2" prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <Label layoutX="39.0" layoutY="23.0" prefHeight="22.0" prefWidth="121.0" text="Modify Product">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Button layoutX="421.0" layoutY="169.0" mnemonicParsing="false" onAction="#OnActionAddSelectedPart" text="Add Selected Part" />
+                <Button layoutX="400.0" layoutY="336.0" mnemonicParsing="false" onAction="#OnActionRemoveSelectedPart" text="Remove Selected Part" />
+                <TableView fx:id="tableViewTwo" layoutX="290.0" layoutY="207.0" prefHeight="120.0" prefWidth="285.0">
+                    <columns>
+                        <TableColumn fx:id="tablePartId" prefWidth="50.0" text="Part ID" />
+                        <TableColumn fx:id="tablePartName" prefWidth="65.0" text="Part Name" />
+                        <TableColumn fx:id="tablePartInv" prefWidth="95.0" text="Inventory Level" />
+                        <TableColumn fx:id="tablePrice" prefWidth="75.0" text="Price / Cost" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
